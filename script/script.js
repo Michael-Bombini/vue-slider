@@ -46,10 +46,27 @@ const sliderVue = new Vue({
 
     data: {
      slider : slides,
+     indice : 0 ,
     },
   
     methods: {
-  
+        scorriSu : function(){
+            console.log(this.slider.title);
+        },
+       
+        scorriGiu : function(){
+            console.log(this.slider[this.indice].image);
+            if(this.indice<5)
+            this.indice++;
+            else if (this.indice===5)
+            this.indice = 0 ;
+
+            
+            console.log(this.indice)
+
+        },
+
+
     }
     
  
