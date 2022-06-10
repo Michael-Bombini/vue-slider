@@ -38,7 +38,7 @@ const slides = [
     }
 ];
 
-console.log(slides);
+
 
 const sliderVue = new Vue({
     el: "#app",
@@ -50,7 +50,7 @@ const sliderVue = new Vue({
      currentImage : 'img/01.jpg',
      currentTitle : `Svezia`,
      currentText : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-
+     active : "active",
     },
   
     methods: {
@@ -67,7 +67,7 @@ const sliderVue = new Vue({
         scorriGiu : function(){
             if(this.indice !== 4)
             this.indice++;
-
+            
             this.currentImage = this.slider[this.indice].image;
             this.currentTitle = this.slider[this.indice].title;
             this.currentText = this.slider[this.indice].text;
@@ -75,6 +75,8 @@ const sliderVue = new Vue({
           
             
         },
+
+       
 
 
     }

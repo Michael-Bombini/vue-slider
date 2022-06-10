@@ -29,7 +29,7 @@
                 <div class="thumbs">
                     <div class="prev" @click="scorriSu()"></div>
                     <div class="next" @click="scorriGiu()"></div>
-                    <div class="thumb active"  v-for="(slide,i) in slider">
+                    <div class="thumb" :class="active" v-for="slide in slider">
                         <img :src="slide.image" :alt="slide.title"/>
                     </div>
                 </div>
