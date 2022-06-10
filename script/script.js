@@ -46,7 +46,8 @@ const sliderVue = new Vue({
 
     data: {
      slider : slides,
-     indice : 0 ,
+     indice : 1 ,
+     currentImage : `img/0${indice}.jpg`,
     },
   
     methods: {
