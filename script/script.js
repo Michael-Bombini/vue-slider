@@ -26,16 +26,20 @@ const slides = [
     }
 ];
 
-const slider = new Vue({
+console.log(slides);
+
+const sliderVue = new Vue({
     el: "#app",
   
 
     data: {
-     
+     slider : slides,
     },
   
     methods: {
   
     }
+   
+
  
   });
