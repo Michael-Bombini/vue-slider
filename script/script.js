@@ -46,25 +46,34 @@ const sliderVue = new Vue({
 
     data: {
      slider : slides,
-     indice : 1 ,
-     currentImage : `img/0${indice}.jpg`,
+     indice : 0 ,
+     currentImage : 'img/01.jpg',
+     currentTitle : `Svezia`,
+     currentText : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+
     },
   
     methods: {
         scorriSu : function(){
-            console.log(this.slider.title);
+            if(this.indice > 0)
+            this.indice--;
+
+            this.currentImage = this.slider[this.indice].image;
+            this.currentTitle = this.slider[this.indice].title;
+            this.currentText = this.slider[this.indice].text;
+ 
         },
        
         scorriGiu : function(){
-            console.log(this.slider[this.indice].image);
-            if(this.indice<5)
+            if(this.indice !== 4)
             this.indice++;
-            else if (this.indice===5)
-            this.indice = 0 ;
 
+            this.currentImage = this.slider[this.indice].image;
+            this.currentTitle = this.slider[this.indice].title;
+            this.currentText = this.slider[this.indice].text;
             
-            console.log(this.indice)
-
+          
+            
         },
 
 
