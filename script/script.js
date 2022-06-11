@@ -72,11 +72,13 @@ const sliderVue = new Vue({
             this.currentTitle = this.slider[this.indice].title;
             this.currentText = this.slider[this.indice].text;
             
-          
-            
         },
 
        
+        
+
+
+
 
 
     }
